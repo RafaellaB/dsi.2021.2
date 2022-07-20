@@ -134,24 +134,34 @@ class _RandomWordsState extends State<RandomWords> {
     final alreadySaved = _saved.contains(pair);
 
     return ListTile(
-      title: Text(
-        pair.asPascalCase,
-        style: _biggerFont,
-      ),
-      trailing: Icon(
-        alreadySaved ? Icons.favorite : Icons.favorite_border,
-        color: alreadySaved ? Colors.red : null,
-        semanticLabel: alreadySaved ? 'Remove from saved' : 'Save',
-      ),
-      onTap: () {
-        setState(() {
-          if (alreadySaved) {
-            _saved.remove(pair);
-          } else {
-            _saved.add(pair);
-          }
-        });
-      },
-    );
+        title: Text(
+          pair.asPascalCase,
+          style: _biggerFont,
+        ),
+        trailing: Container(
+            width: 100,
+            child: Row(
+              children: [
+                IconButton(
+                  icon: alreadySaved
+                      ? const Icon(Icons.favorite)
+                      : const Icon(Icons.favorite_border),
+                  color: alreadySaved ? Colors.red : null,
+                  onPressed: () {
+                    setState(() {
+                      alreadySaved ? _saved.remove(pair) : _saved.add(pair);
+                    });
+                  },
+                ),
+                IconButton(
+                    icon: const Icon(Icons.delete),
+                    onPressed: () {
+                      setState(() {
+                        _suggestions.remove(pair);
+                        _saved.remove(pair);
+                      });
+                    })
+              ],
+            )));
   }
 }
