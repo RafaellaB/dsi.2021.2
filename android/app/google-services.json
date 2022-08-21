@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "623660364939",
+    "project_id": "dsi-ufrpe",
+    "storage_bucket": "dsi-ufrpe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623660364939:android:1c0d79ff91b147cf96d08e",
+        "android_client_info": {
+          "package_name": "com.example.startup_namer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "623660364939-78ojgdhdqtfvvbnf7bq3rnmse7ib6i2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmkLIFj_daxdXbkNYZVsm3lWFWx_dkdDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "623660364939-78ojgdhdqtfvvbnf7bq3rnmse7ib6i2e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "623660364939-n1efplv77al1pq04g2cvqdhjd62lslje.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.startupNamer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
